@@ -22,7 +22,7 @@ export default class YouTubeDebugger extends Component {
         this.setState(previousState => {
             return {
                 settings: {
-                    ...this.state.settings,
+                    ...previousState.settings,
                     bitrate: 12
                 }
             }
@@ -33,9 +33,9 @@ export default class YouTubeDebugger extends Component {
         this.setState(previousState => {
             return {
                 settings: {
-                    ...this.state.settings,
+                    ...previousState.settings,
                     video: {
-                        ...this.state.video,
+                        ...previousState.video,
                         resolution: "720p"
                     }
                 }
